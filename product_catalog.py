@@ -33,6 +33,7 @@ for product in products:
 
 
 # TODO: Step 5 - Write a function to calculate the number of matching tags
+
 def count_matches(product_tags, customer_tags):
     '''
     Args:
@@ -41,7 +42,7 @@ def count_matches(product_tags, customer_tags):
     Returns:
         int: The number of matching tags between the product and customer.
     '''
-    pass
+    return len(product_tags & customer_tags)
 
 
 
