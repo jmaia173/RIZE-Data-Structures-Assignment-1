@@ -1,7 +1,7 @@
 from product_data import products
 # TODO: Step 1 - Print out the products to see the data that you are working with.
 
-
+print(products[:3])
 
 # TODO: Step 2 - Create a list called customer_preferences and store the user preference in this list.
 
