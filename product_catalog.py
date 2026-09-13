@@ -48,6 +48,7 @@ def count_matches(product_tags, customer_tags):
 
 
 # TODO: Step 6 - Write a function that loops over all products and returns a sorted list of matches
+
 def recommend_products(products, customer_tags):
     '''
     Args:
@@ -56,7 +57,13 @@ def recommend_products(products, customer_tags):
     Returns:
         list: A list of products containing product names and their match counts.
     '''
-    pass
+    recommendations = []
+    for product in products:
+        score = count_matches(product["tags"], customer_tags)
+        recommendations.append({"name": product["name"], "score": score})
+
+    recommendations.sort(key=lambda p: p["score"], reverse=True)
+    return recommendations
 
 
 
