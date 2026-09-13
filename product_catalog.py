@@ -5,6 +5,7 @@ print(products[:3])
 
 # TODO: Step 2 - Create a list called customer_preferences and store the user preference in this list.
 
+customer_preferences = []
 
 response = ""
 while response != "N":
