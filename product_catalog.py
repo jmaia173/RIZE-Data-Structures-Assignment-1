@@ -23,6 +23,12 @@ customer_preferences = set(customer_preferences)
 # TODO: Step 4 - Convert the product tags to sets in order to allow for faster comparisons.
 converted_products = []
 
+converted_products = []
+
+for product in products:
+    product_copy = product.copy()
+    product_copy["tags"] = set(product["tags"])
+    converted_products.append(product_copy)
 
 
 
