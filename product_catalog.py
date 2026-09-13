@@ -60,7 +60,8 @@ def recommend_products(products, customer_tags):
     recommendations = []
     for product in products:
         score = count_matches(product["tags"], customer_tags)
-        recommendations.append({"name": product["name"], "score": score})
+        if score > 0:
+            recommendations.append({"name": product["name"], "score": score})
 
     recommendations.sort(key=lambda p: p["score"], reverse=True)
     return recommendations
