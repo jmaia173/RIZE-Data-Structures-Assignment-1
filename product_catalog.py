@@ -69,7 +69,9 @@ def recommend_products(products, customer_tags):
 
 # TODO: Step 7 - Call your function and print the results
 
-
+recommendations = recommend_products(converted_products, customer_preferences)
+for rec in recommendations:
+    print(f"{rec['name']} - matches: {rec['score']}")
 
 
 # DESIGN MEMO (write below in a comment):
