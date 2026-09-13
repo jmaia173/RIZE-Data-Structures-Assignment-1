@@ -76,4 +76,13 @@ for rec in recommendations:
 
 # DESIGN MEMO (write below in a comment):
 # 1. What core operations did you use (e.g., intersections, loops)? Why?
+#    I used set intersections (&) in count_matches() to compare product tags against
+#    customer preferences, since set lookups/intersections are faster than checking
+#    membership across lists. I used loops to convert product tags to sets and to
+#    build the recommendation list with each product's score.
+
 # 2. How might this code change if you had 1000+ products?
+#    Looping through every product on each call is O(n), which gets slower as the
+#    catalog grows. With 1000+ products, I'd build an index mapping each tag to the
+#    list of products that have it, so I could look up only the relevant products
+#    for a customer's preferences instead of scanning the whole catalog each time.
